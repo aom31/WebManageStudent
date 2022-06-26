@@ -8,4 +8,6 @@ public interface StudentService {
 
     //implement student list
     List<Student> getAllStudents();
+
+    Student saveStudent(Student student);
 }

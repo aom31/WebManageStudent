@@ -17,9 +17,13 @@ public class StudentServiceimpl implements StudentService {
         super();
         this.studentRepository = studentRepository;
     }
-
     @Override
     public List<Student> getAllStudents() {
         return studentRepository.findAll();
+    }
+
+    @Override
+    public Student saveStudent(Student student) {
+        return studentRepository.save(student);
     }
 }

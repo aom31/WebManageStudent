@@ -14,6 +14,12 @@
             <div class="row">
                 <h1> List Students</h1>
             </div>
+            <div class="row">
+                <div class="col-lg-3">
+                    <a th:herf= "@/{students/new}" class="btn btn-primary btn-sm mb-3"> Add new student</a>
+
+                </div>
+            </div>
             <table class="table">
                 <thead class=" table-dark">
                     <tr>
@@ -25,7 +31,7 @@
 
                 </thead>
                 <tbody>
-                    <tr th:each="student : ${students} ">
+                    <tr th:each="student : ${liststudents} ">
                         <td th:text = "${student.firstname}" ></td>
                         <td th:text = "${student.lastname}" ></td>
                         <td th:text = "${student.email}" ></td>
