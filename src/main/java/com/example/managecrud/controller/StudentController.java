@@ -19,8 +19,9 @@ public class StudentController {
     }
 
     @GetMapping("/")
-    public String listStudents(Model model){
+    public String viewHomePage(Model model){
         model.addAttribute("liststudents", studentService.getAllStudents());
+
         return "index";
     }
     @GetMapping("/students/new")
@@ -31,10 +32,10 @@ public class StudentController {
         model.addAttribute("student", student);
         return "create_student";
     }
-    @PostMapping("/students")
+    @PostMapping("/savestudent")
     public String saveStudent(@ModelAttribute("student") Student student){
         studentService.saveStudent(student);
-        return "redirect:/students";
+        return "redirect:/";
 
     }
 }
