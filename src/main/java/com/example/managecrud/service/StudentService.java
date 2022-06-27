@@ -1,6 +1,7 @@
 package com.example.managecrud.service;
 
 import com.example.managecrud.entity.Student;
+import org.springframework.ui.Model;
 
 import java.util.List;
 
@@ -10,4 +11,8 @@ public interface StudentService {
     List<Student> getAllStudents();
 
     Student saveStudent(Student student);
+
+    Student getStudentById(Long id);
+
+    Student updateStudent(Student student);
 }
