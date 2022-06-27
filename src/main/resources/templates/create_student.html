@@ -37,7 +37,7 @@
             <div class="col-lg-6 col-md-6 col-sm-6 container justify-content-center card">
                 <h1 class="text-center"> Create New Student</h1>
                 <div class="card-body">
-                    <form th:action="@{/savestudent}" th:object = "${student}" method="POST">
+                    <form th:action="@{/saveStudent}" th:object = "${student}" method="POST">
                         <div class="form-group">
                             <label> Student Firstname</label>
                             <input type="text" name="firstname" th:field="*{firstname}" class="form-control" placeholder="Enter Student firstname">
